@@ -6,6 +6,7 @@
 parameters:
     locale: '%env(resolve:LOCALE)%'
     api_items_per_page: '%env(resolve:API_ITEMS_PER_PAGE)%'
+    graphql_show_debug_info: '%env(bool:GRAPHQL_SHOW_DEBUG_INFO)%'
 
 services:
     # default configuration for services in *this* file
