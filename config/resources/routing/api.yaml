@@ -1,8 +1,0 @@
-app_api_index:
-    path: /
-    controller: App\Controller\IndexController::index
-    methods: [GET]
-
-#app_api_products:
-    #resource: api/products.yaml
-    #prefix: /products

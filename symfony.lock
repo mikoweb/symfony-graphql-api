@@ -147,6 +147,20 @@
     "nikic/php-parser": {
         "version": "v4.13.1"
     },
+    "overblog/graphql-bundle": {
+        "version": "0.13",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.12",
+            "ref": "b122f3bfcfc0706c617a74afa8510af4799810f6"
+        },
+        "files": [
+            "config/packages/graphql.yaml",
+            "config/graphql/types/.gitignore",
+            "config/routes/graphql.yaml"
+        ]
+    },
     "phar-io/manifest": {
         "version": "2.0.3"
     },
@@ -349,6 +363,9 @@
     },
     "symfony/event-dispatcher-contracts": {
         "version": "v2.4.0"
+    },
+    "symfony/expression-language": {
+        "version": "v5.3.7"
     },
     "symfony/filesystem": {
         "version": "v5.3.4"
@@ -605,5 +622,8 @@
     },
     "webmozart/assert": {
         "version": "1.10.0"
+    },
+    "webonyx/graphql-php": {
+        "version": "v0.13.9"
     }
 }

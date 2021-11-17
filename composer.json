@@ -16,6 +16,7 @@
         "jms/serializer-bundle": "^4.0",
         "knplabs/knp-paginator-bundle": "^5.7",
         "lcobucci/jwt": "^4.1",
+        "overblog/graphql-bundle": "^0.13.6",
         "sensio/framework-extra-bundle": "^6.2",
         "stof/doctrine-extensions-bundle": "^1.6",
         "symfony/console": "5.3.*",
