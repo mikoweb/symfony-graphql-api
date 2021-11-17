@@ -1,0 +1,4 @@
+app_api:
+    resource: resources/routing/api.yaml
+    prefix: /
+    defaults: {_format: json}
