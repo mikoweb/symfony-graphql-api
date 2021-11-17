@@ -1,7 +1,7 @@
 overblog_graphql:
     definitions:
         config_validation: "%kernel.debug%"
-        show_debug_info: "%graphql_show_debug_info%"
+        show_debug_info: "%kernel.debug%"
         schema:
             query: Query
         mappings:

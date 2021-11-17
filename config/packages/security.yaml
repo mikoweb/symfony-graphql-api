@@ -38,4 +38,5 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/(_(profiler|wdt)|css|images|js)/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/graphiql, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: ROLE_API_USER }

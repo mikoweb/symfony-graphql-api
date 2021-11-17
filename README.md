@@ -2,8 +2,9 @@
 
 ## env options (.env.local)
 
+    APP_ENV
     DATABASE_URL
-    GRAPHQL_SHOW_DEBUG_INFO
+    DEV_CLIENT_API_TOKEN
     API_ITEMS_PER_PAGE
 
 ## Install
@@ -39,6 +40,7 @@
 * [Access control in GraphQL using Symfony](https://dev.to/bornfightcompany/access-control-in-graphql-using-symfony-io)
 * [Annotations & PHP 8 attributes](https://github.com/overblog/GraphQLBundle/blob/master/docs/annotations/index.md)
 * [Optimizations for entity fetching for Doctrine ORM to address N+1 queries problem](https://github.com/malef/associate)
+* [Client GraphiQL](https://github.com/overblog/GraphiQLBundle)
 
 ## Copyrights
 

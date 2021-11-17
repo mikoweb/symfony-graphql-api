@@ -1,0 +1,6 @@
+{% extends '@OverblogGraphiQL/GraphiQL/index.html.twig' %}
+
+{% block graphql_fetcher_headers %}
+    {{ parent() }}
+    headers["Authorization"] = "{{ dev_client_api_token }}";
+{% endblock graphql_fetcher_headers %}
