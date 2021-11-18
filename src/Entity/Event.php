@@ -114,26 +114,22 @@ class Event implements TimestampableInterface, BlameableInterface, EventDatesAva
     private string $email;
 
     /**
-     * @var DateTime
-     *
      * @ORM\Column(name="date_from", type="datetime", nullable=false)
      * @Assert\NotNull()
      * @Assert\Type(type="\DateTimeInterface", message="Invalid date")
      *
      * @Expose
      */
-    private DateTime $dateFrom;
+    private DateTimeInterface $dateFrom;
 
     /**
-     * @var DateTime
-     *
      * @ORM\Column(name="date_to", type="datetime", nullable=false)
      * @Assert\NotNull ()
      * @Assert\Type(type="\DateTimeInterface", message="Invalid date")
      *
      * @Expose
      */
-    private DateTime $dateTo;
+    private DateTimeInterface $dateTo;
 
     public function __construct(
         string $name,
@@ -142,8 +138,8 @@ class Event implements TimestampableInterface, BlameableInterface, EventDatesAva
         string $city,
         string $zipcode,
         string $email,
-        DateTime $dateFrom,
-        DateTime $dateTo
+        DateTimeInterface $dateFrom,
+        DateTimeInterface $dateTo
     )
     {
         $this->id = Uuid::v4();

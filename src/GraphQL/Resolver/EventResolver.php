@@ -36,6 +36,9 @@ final class EventResolver implements ResolverInterface, AliasedInterface
         return $event->getDateTo();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public static function getAliases(): array
     {
         return [

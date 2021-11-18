@@ -11,19 +11,22 @@ use Symfony\Component\Validator\ConstraintValidator;
 final class EventDatesConstraintValidator extends ConstraintValidator
 {
     /**
-     * @param EventDatesAvareInterface $value
+     * @param EventDatesAvareInterface|array $value
      * @param Constraint $constraint
      */
     public function validate($value, Constraint $constraint): void
     {
-        if ($value->getDateTo() < $value->getDateFrom()) {
+        $dateFrom = is_array($value) ? $value['dateFrom'] : $value->getDateFrom();
+        $dateTo = is_array($value) ? $value['dateTo'] : $value->getDateTo();
+
+        if ($dateTo < $dateFrom) {
             $this->context->buildViolation('dateTo must be greather than dateFrom')
                 ->atPath('dateFrom')
                 ->addViolation()
             ;
         }
 
-        $interval = $value->getDateFrom()->diff($value->getDateTo());
+        $interval = $dateFrom->diff($dateTo);
 
         if ($interval->days < 7) {
             $this->context->buildViolation('dateTo must be greather than dateFrom by 7 days')

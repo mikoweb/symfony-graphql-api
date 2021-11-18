@@ -6,5 +6,6 @@
     <group tag="events">
         <role role="ROLE_EVENT_SHOW" />
         <role role="ROLE_EVENTS_LIST" />
+        <role role="ROLE_EVENT_CREATE" />
     </group>
 </roles>

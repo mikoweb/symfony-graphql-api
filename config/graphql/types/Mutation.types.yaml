@@ -1,0 +1,12 @@
+Mutation:
+    type: object
+    config:
+        description: "Events Mutations"
+        fields:
+            event_create:
+                type: "Event"
+                access: "@=hasRole('ROLE_EVENT_CREATE')"
+                args:
+                    input:
+                        type: "EventInput!"
+                resolve: "@=mutation('EventCreate', [args['input'], value])"

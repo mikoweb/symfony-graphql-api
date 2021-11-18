@@ -4,5 +4,6 @@
         <role>ROLE_API_USER</role>
         <role>ROLE_EVENT_SHOW</role>
         <role>ROLE_EVENTS_LIST</role>
+        <role>ROLE_EVENT_CREATE</role>
     </group>
 </groups>

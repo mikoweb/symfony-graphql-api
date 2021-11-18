@@ -26,6 +26,9 @@ final class EventsListResolver implements ResolverInterface, AliasedInterface
         ];
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public static function getAliases(): array
     {
         return [

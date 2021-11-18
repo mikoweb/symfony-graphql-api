@@ -41,8 +41,29 @@ can find any by entering the name of the event in the search engine.
 Events List:
 
 ```
-{events_list(limit:100, page:1) {
-  events {
+query {
+  events_list(limit:100, page:1) {
+    events {
+      id
+      name
+      slug
+      email
+      streetAddress
+      city
+      country
+      zipcode
+      dateFrom
+      dateTo
+    }
+  }
+}
+```
+
+Single Event:
+
+```
+query {
+  event(id:"bca2bbaf-f44e-4e06-a6cb-4922ccf245da") {
     id
     name
     slug
@@ -54,24 +75,26 @@ Events List:
     dateFrom
     dateTo
   }
-}}
+}
 ```
 
-Single Event:
+## Mutations
 
 ```
-{event(id:"bca2bbaf-f44e-4e06-a6cb-4922ccf245da") {
-  id
-  name
-  slug
-  email
-  streetAddress
-  city
-  country
-  zipcode
-  dateFrom
-  dateTo
-}}
+mutation {
+  event_create(input: {
+    name: "Jakieś wydarzenie"
+    streetAddress: "al. Warszawska 12"
+    country: "PL"
+    city: "Olsztyn"
+    zipcode: "10-082"
+    email: "jan@kowalski.dev"
+    dateFrom: "2020-01-01"
+    dateTo: "2020-02-25"
+  }) {
+    id
+  }
+}
 ```
 
 # Client for dev
@@ -90,6 +113,7 @@ After start server open `http://localhost:3000/graphiql`.
 * [Access control in GraphQL using Symfony](https://dev.to/bornfightcompany/access-control-in-graphql-using-symfony-io)
 * [Annotations & PHP 8 attributes](https://github.com/overblog/GraphQLBundle/blob/master/docs/annotations/index.md)
 * [Annotations reference](https://github.com/overblog/GraphQLBundle/blob/master/docs/annotations/annotations-reference.md)
+* [Validation](https://github.com/overblog/GraphQLBundle/blob/master/docs/validation/index.md)
 * [The Arguments Transformer service](https://github.com/overblog/GraphQLBundle/blob/master/docs/annotations/arguments-transformer.md)
 * [Optimizations for entity fetching for Doctrine ORM to address N+1 queries problem](https://github.com/malef/associate)
 * [Client GraphiQL](https://github.com/overblog/GraphiQLBundle)

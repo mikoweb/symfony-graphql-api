@@ -4,6 +4,7 @@ overblog_graphql:
         show_debug_info: '%kernel.debug%'
         schema:
             query: RootQuery
+            mutation: Mutation
         mappings:
             types:
                 -
@@ -17,4 +18,8 @@ overblog_graphql:
                 -
                     type: annotation
                     dir: '%kernel.project_dir%/src/GraphQL/Query'
+                    suffix: ~
+                -
+                    type: annotation
+                    dir: '%kernel.project_dir%/src/GraphQL/Input'
                     suffix: ~

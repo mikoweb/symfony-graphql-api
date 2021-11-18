@@ -1,7 +1,7 @@
 RootQuery:
     type: object
     config:
-        description: "Events API"
+        description: "Events Queries"
         fields:
             event:
                 type: "Event"
