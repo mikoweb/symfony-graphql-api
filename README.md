@@ -78,6 +78,27 @@ query {
 }
 ```
 
+Events Search:
+
+```
+query {
+  events_search(phrase:"Impreza") {
+    events {
+      id
+      name
+      slug
+      email
+      streetAddress
+      city
+      country
+      zipcode
+      dateFrom
+      dateTo
+    }
+  }
+}
+```
+
 ## Mutations
 
 Create Event

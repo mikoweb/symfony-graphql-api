@@ -7,5 +7,6 @@
         <role role="ROLE_EVENT_SHOW" />
         <role role="ROLE_EVENTS_LIST" />
         <role role="ROLE_EVENT_CREATE" />
+        <role role="ROLE_EVENTS_SEARCH" />
     </group>
 </roles>

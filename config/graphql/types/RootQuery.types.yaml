@@ -22,3 +22,11 @@ RootQuery:
                         description: "Limit items per page"
                         type: "Int"
                 resolve: "@=resolver('EventsList', [args])"
+            events_search:
+                type: "EventsList"
+                access: "@=hasRole('ROLE_EVENTS_SEARCH')"
+                args:
+                    phrase:
+                        description: "Search phrase"
+                        type: "String!"
+                resolve: "@=resolver('EventsSearch', [args])"
