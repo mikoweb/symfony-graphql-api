@@ -1,4 +1,7 @@
 {
+    "barbieswimcrew/zip-code-validator": {
+        "version": "v2.0.0"
+    },
     "behat/transliterator": {
         "version": "v1.3.0"
     },

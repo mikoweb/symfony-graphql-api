@@ -1,5 +1,10 @@
 # Symfony GraphQL API
 
+This module is to be used to create a list of locations by users - we can assume,
+that it is about Events that will take place at the address indicated and will last at the specified address
+time interval (date from - to). The module returns a list of added events, and the user
+can find any by entering the name of the event in the search engine.
+
 ## env options (.env.local)
 
     APP_ENV
@@ -31,16 +36,26 @@
 
     php ./vendor/bin/phpunit
 
+# Client for dev
+
+After start server open `http://localhost:3000/graphiql`.
+
+![GraphiQL.png](https://github.com/mikoweb/symfony-graphql-api/raw/master/markdown/static/GraphiQL.png)
+
 ## Bibliography
 
+* [Introduction to GraphQL](https://graphql.org/learn/)
 * [Quick start](https://github.com/overblog/GraphQLBundle/blob/master/docs/definitions/quick-start.md)
 * [Schema](https://github.com/overblog/GraphQLBundle/blob/master/docs/definitions/schema.md)
 * [Resolver](https://github.com/overblog/GraphQLBundle/blob/master/docs/definitions/resolver.md)
 * [Debug](https://github.com/overblog/GraphQLBundle/blob/master/docs/definitions/debug/index.md)
 * [Access control in GraphQL using Symfony](https://dev.to/bornfightcompany/access-control-in-graphql-using-symfony-io)
 * [Annotations & PHP 8 attributes](https://github.com/overblog/GraphQLBundle/blob/master/docs/annotations/index.md)
+* [Annotations reference](https://github.com/overblog/GraphQLBundle/blob/master/docs/annotations/annotations-reference.md)
+* [The Arguments Transformer service](https://github.com/overblog/GraphQLBundle/blob/master/docs/annotations/arguments-transformer.md)
 * [Optimizations for entity fetching for Doctrine ORM to address N+1 queries problem](https://github.com/malef/associate)
 * [Client GraphiQL](https://github.com/overblog/GraphiQLBundle)
+* [Adding a GraphQL API to your Symfony Flex application](https://symfony.fi/entry/adding-a-graphql-api-to-your-symfony-flex-app)
 
 ## Copyrights
 

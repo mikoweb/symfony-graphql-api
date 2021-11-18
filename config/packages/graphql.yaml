@@ -1,12 +1,20 @@
 overblog_graphql:
     definitions:
-        config_validation: "%kernel.debug%"
-        show_debug_info: "%kernel.debug%"
+        config_validation: '%kernel.debug%'
+        show_debug_info: '%kernel.debug%'
         schema:
-            query: Query
+            query: RootQuery
         mappings:
             types:
                 -
                     type: yaml
                     dir: "%kernel.project_dir%/config/graphql/types"
                     suffix: null
+                -
+                    type: annotation
+                    dir: '%kernel.project_dir%/src/GraphQL/Type'
+                    suffix: ~
+                -
+                    type: annotation
+                    dir: '%kernel.project_dir%/src/GraphQL/Query'
+                    suffix: ~

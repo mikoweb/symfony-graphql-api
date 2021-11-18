@@ -1,0 +1,22 @@
+RootQuery:
+    type: object
+    config:
+        description: "Events API"
+        fields:
+            event:
+                type: "Event"
+                args:
+                    id:
+                        description: "Resolves using the Event ID."
+                        type: "ID!"
+                resolve: "@=resolver('Event', [args])"
+            events_list:
+                type: "EventsList"
+                args:
+                    page:
+                        description: "Page number"
+                        type: "Int"
+                    limit:
+                        description: "Limit items per page"
+                        type: "Int"
+                resolve: "@=resolver('EventsList', [args])"
