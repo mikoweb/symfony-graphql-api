@@ -18,7 +18,6 @@ can find any by entering the name of the event in the search engine.
     php bin/console doctrine:database:create
     php bin/console doctrine:schema:update --force
     php bin/console doctrine:fixtures:load --append --group=users
-    php bin/console doctrine:fixtures:load --append --group=products
 
 ## Create API user
 
