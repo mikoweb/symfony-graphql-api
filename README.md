@@ -80,6 +80,8 @@ query {
 
 ## Mutations
 
+Create Event
+
 ```
 mutation {
   event_create(input: {
