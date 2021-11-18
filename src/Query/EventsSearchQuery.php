@@ -5,43 +5,26 @@
 
 namespace App\Query;
 
-use App\Repository\EventRepository;
-use Knp\Component\Pager\PaginatorInterface;
+use Elastica\Util;
+use FOS\ElasticaBundle\Finder\PaginatedFinderInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
-use function Doctrine\ORM\QueryBuilder;
 
 final class EventsSearchQuery
 {
     private ParameterBagInterface $params;
-    private EventRepository $repository;
-    private PaginatorInterface $paginator;
+    private PaginatedFinderInterface $eventsFinder;
 
-    public function __construct(
-        ParameterBagInterface $params,
-        EventRepository $repository,
-        PaginatorInterface $paginator
-    )
+    public function __construct(ParameterBagInterface $params, PaginatedFinderInterface $eventsFinder)
     {
         $this->params = $params;
-        $this->repository = $repository;
-        $this->paginator = $paginator;
+        $this->eventsFinder = $eventsFinder;
     }
 
     public function query(string $phrase, ?int $limit, ?int $page = 1): array
     {
-        $qb = $this->repository->createQueryBuilder('e');
-        $qb = $qb
-            ->where($qb->expr()->like('e.name', ':like_name'))
-            ->setParameter('like_name', "%$phrase%")
-            ->orderBy('e.createdAt', 'DESC')
-        ;
-
-        $pagination = $this->paginator->paginate(
-            $qb,
-            $page ?? 1,
+        return $this->eventsFinder->find(
+            Util::escapeTerm($phrase),
             $limit ?? $this->params->get('api_items_per_page')
         );
-
-        return (array)$pagination->getItems();
     }
 }

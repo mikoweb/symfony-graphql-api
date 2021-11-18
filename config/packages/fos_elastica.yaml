@@ -1,0 +1,11 @@
+# Read the documentation: https://github.com/FriendsOfSymfony/FOSElasticaBundle/blob/master/doc/setup.md
+fos_elastica:
+    clients:
+        default: { url: '%env(ELASTICSEARCH_URL)%' }
+    indexes:
+        events:
+            properties:
+                name: ~
+            persistence:
+                driver: orm
+                model: App\Entity\Event

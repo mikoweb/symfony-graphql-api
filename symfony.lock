@@ -103,8 +103,29 @@
     "doctrine/sql-formatter": {
         "version": "1.1.1"
     },
+    "elasticsearch/elasticsearch": {
+        "version": "v7.15.0"
+    },
+    "ezimuel/guzzlestreams": {
+        "version": "3.0.1"
+    },
+    "ezimuel/ringphp": {
+        "version": "1.2.0"
+    },
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
+    },
+    "friendsofsymfony/elastica-bundle": {
+        "version": "6.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "5.0",
+            "ref": "46c9cd2c1e07f0fcfd97e96f12b03b2e0845c4cd"
+        },
+        "files": [
+            "config/packages/fos_elastica.yaml"
+        ]
     },
     "gedmo/doctrine-extensions": {
         "version": "v3.1.0"
@@ -153,6 +174,9 @@
     "nikic/php-parser": {
         "version": "v4.13.1"
     },
+    "nyholm/dsn": {
+        "version": "2.0.1"
+    },
     "overblog/graphiql-bundle": {
         "version": "0.2",
         "recipe": {
@@ -178,6 +202,9 @@
             "config/graphql/types/.gitignore",
             "config/routes/graphql.yaml"
         ]
+    },
+    "pagerfanta/pagerfanta": {
+        "version": "v3.4.0"
     },
     "phar-io/manifest": {
         "version": "2.0.3"
@@ -240,6 +267,12 @@
     },
     "psr/log": {
         "version": "2.0.0"
+    },
+    "react/promise": {
+        "version": "v2.8.0"
+    },
+    "ruflin/elastica": {
+        "version": "7.1.2"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"

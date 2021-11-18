@@ -119,11 +119,35 @@ mutation {
 }
 ```
 
-# Client for dev
+## Client for dev
 
 After start server open `http://localhost:3000/graphiql`.
 
 ![GraphiQL.png](https://github.com/mikoweb/symfony-graphql-api/raw/master/markdown/static/GraphiQL.png)
+
+## Elasticsearch
+
+Check Elasticsearch status. Should be active.
+
+    sudo systemctl status elasticsearch
+
+Check Elasticsearch version:
+
+    curl http://localhost:9200
+
+Required 7.* for this project.
+
+### Create indexes
+
+You need to create the indexes in Elasticsearch. This can be easily done running the following command:
+
+    php bin/console fos:elastica:create
+
+### Populate data
+
+You can populate the information of the table in Elasticsearch running the following command:
+
+    php bin/console fos:elastica:populate
 
 ## Bibliography
 
@@ -140,6 +164,7 @@ After start server open `http://localhost:3000/graphiql`.
 * [Optimizations for entity fetching for Doctrine ORM to address N+1 queries problem](https://github.com/malef/associate)
 * [Client GraphiQL](https://github.com/overblog/GraphiQLBundle)
 * [Adding a GraphQL API to your Symfony Flex application](https://symfony.fi/entry/adding-a-graphql-api-to-your-symfony-flex-app)
+* [How to create your search engine with Elasticsearch 7 and FOSElasticaBundle in Symfony 5 ](https://ourcodeworld.com/articles/read/1516/how-to-create-your-search-engine-with-elasticsearch-7-and-foselasticabundle-in-symfony-5)
 
 ## Copyrights
 
