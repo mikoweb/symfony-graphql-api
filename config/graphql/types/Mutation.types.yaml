@@ -9,4 +9,4 @@ Mutation:
                 args:
                     input:
                         type: "EventInput!"
-                resolve: "@=mutation('EventCreate', [args['input'], value])"
+                resolve: "@=mutation('EventCreate', [args['input']])"
