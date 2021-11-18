@@ -36,6 +36,44 @@ can find any by entering the name of the event in the search engine.
 
     php ./vendor/bin/phpunit
 
+## Queries
+
+Events List:
+
+```
+{events_list(limit:100, page:1) {
+  events {
+    id
+    name
+    slug
+    email
+    streetAddress
+    city
+    country
+    zipcode
+    dateFrom
+    dateTo
+  }
+}}
+```
+
+Single Event:
+
+```
+{event(id:"bca2bbaf-f44e-4e06-a6cb-4922ccf245da") {
+  id
+  name
+  slug
+  email
+  streetAddress
+  city
+  country
+  zipcode
+  dateFrom
+  dateTo
+}}
+```
+
 # Client for dev
 
 After start server open `http://localhost:3000/graphiql`.
