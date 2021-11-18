@@ -3,4 +3,8 @@
     <group tag="api">
         <role role="ROLE_API_USER" />
     </group>
+    <group tag="events">
+        <role role="ROLE_EVENT_SHOW" />
+        <role role="ROLE_EVENTS_LIST" />
+    </group>
 </roles>

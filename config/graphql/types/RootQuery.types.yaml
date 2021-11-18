@@ -5,6 +5,7 @@ RootQuery:
         fields:
             event:
                 type: "Event"
+                access: "@=hasRole('ROLE_EVENT_SHOW')"
                 args:
                     id:
                         description: "Resolves using the Event ID."
@@ -12,6 +13,7 @@ RootQuery:
                 resolve: "@=resolver('Event', [args])"
             events_list:
                 type: "EventsList"
+                access: "@=hasRole('ROLE_EVENTS_LIST')"
                 args:
                     page:
                         description: "Page number"
